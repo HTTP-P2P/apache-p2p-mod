@@ -96,7 +96,7 @@ static void register_hooks(apr_pool_t *pool)
  */
 static int p2p_handler(request_rec *r)
 {
-    if( strstr(r->filename, "getI2Pd") == 0 ) return(DECLINED);
+    if( strstr(r->filename, "getP2P") == 0 ) return(DECLINED);
 
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     p2p_config    *config = (p2p_config *) ap_get_module_config(r->per_dir_config, &p2p_module);
