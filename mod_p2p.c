@@ -103,13 +103,13 @@ static int p2p_handler(request_rec *r)
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
     ap_set_content_type(r, "text/plain");
-    ap_rprintf(r, "Enabled: %u\n", config->enabled);
+  //  ap_rprintf(r, "Enabled: %u\n", config->enabled);
     //ap_rprintf(r, "p2p_ADDR: %s\n", config->test);
-    ap_rprintf(r, "About: %s\n", config->context);
-    ap_rprintf(r, "handler: %s\n", r->handler);
-    ap_rprintf(r, "path: %s\n", config->path);
-    ap_rprintf(r, "filename: %s\n", r->filename);
-    ap_rprintf(r, "count_p2p addr: %d\n", website_count);
+   // ap_rprintf(r, "About: %s\n", config->context);
+   // ap_rprintf(r, "handler: %s\n", r->handler);
+    //ap_rprintf(r, "path: %s\n", config->path);
+   // ap_rprintf(r, "filename: %s\n", r->filename);
+    //ap_rprintf(r, "count_p2p addr: %d\n", website_count);
     for(unsigned int i = website_count-1;i--;){
 	ap_rprintf( r, "%s = %s\n", config->addresses.i2p[i], config->addresses.clear[i] );
     }
